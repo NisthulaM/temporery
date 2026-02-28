@@ -6,6 +6,7 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/auth.js";
 import contactRoutes from "./routes/contacts.js";
 import sosRoutes from "./routes/sos.js";
+import areaRoutes from "./routes/areas.js";
 
 dotenv.config();
 connectDB();
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/contacts", contactRoutes);
 app.use("/api/sos", sosRoutes);
+app.use("/api/areas", areaRoutes);
 
 
 app.listen(5000, () => {
